@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculatrice </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--saisie des nombres-->
+    <form class="form">
+        <h1>Calculatrice</h1>
+        <p>Entrer le premier nombre</p>
+        <!--dans les deux champs je vais utuliser l'attribut onkeydown pour 
+        appeler la fonction bloquer qui va empecher l'utilisateur d'entrer
+        des caracteres autres que des chiffres car (input="number") permet aussi 
+        des caracteres "e", "E", "." et "," et des operateurs "-" et "+" mais moi
+        je vais juste bloquer "e", "E", "," et "+" je vais laisser le "-" parceque
+         lutulisateur peut donner un nombre negatif et aussi le "." pour les nombres decimaux -->
+        <input type="number" id="nombre" onkeydown="bloquer(event)">
+        <p>Entrer le second nombre</p>
+        <input type="number" id="nombre2" onkeydown="bloquer(event)">
+        <button type="button" onclick="calculer()">Calculer</button>
+        <!-- Zone d'affichage du résultat -->
+        <p id="resultat"></p>
+    </form>
+
+
+
+    <script src="script.js"> </script>
+
+</body>
+
+</html>
